@@ -975,7 +975,7 @@ int main(void)
 	test_resize();
 	test_capacity();
 	test_empty();
-	test_reserve(); // works but capacity grows differently
+	test_reserve();
 	test_subscript_operator();
 	test_at();
 	test_front();

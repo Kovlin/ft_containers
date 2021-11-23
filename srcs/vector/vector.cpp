@@ -119,33 +119,30 @@ int main(void)
 	/* --- CAPACITY --- */
 	
 	{
-		// std::vector<char> v_char;
-		// outputfile << "sizeof(char): " << sizeof(char) << std::endl;
-		// outputfile << "9223372036854775807 / sizeof(char): " << 9223372036854775807 / sizeof(char) << std::endl;
-		// outputfile << "sizeof(int): " << sizeof(int) << std::endl;
-		// outputfile << "9223372036854775807 / sizeof(int): " << 9223372036854775807 / sizeof(int) << std::endl;
-		// outputfile << "sizeof(std::string): " << sizeof(std::string) << std::endl;
-		// outputfile << "9223372036854775807 / sizeof(std::string): " << 9223372036854775807 / sizeof(int) << std::endl;
-		// outputfile << "v_char.max_size(): " << v_char.max_size() << std::endl;
-		// std::vector<int> v_int;
-		// outputfile << "v_int.max_size(): " << v_int.max_size() << std::endl;
-		// std::vector<std::string> v_str;
-		// outputfile << "v_str.max_size(): " << v_str.max_size() << std::endl;
+		std::vector<char> v_char;
+		outputfile << "sizeof(char): " << sizeof(char) << std::endl;
+		outputfile << "9223372036854775807 / sizeof(char): " << 9223372036854775807 / sizeof(char) << std::endl;
+		outputfile << "sizeof(int): " << sizeof(int) << std::endl;
+		outputfile << "9223372036854775807 / sizeof(int): " << 9223372036854775807 / sizeof(int) << std::endl;
+		outputfile << "sizeof(std::string): " << sizeof(std::string) << std::endl;
+		outputfile << "9223372036854775807 / sizeof(std::string): " << 9223372036854775807 / sizeof(int) << std::endl;
+		outputfile << "v_char.max_size(): " << v_char.max_size() << std::endl;
+		std::vector<int> v_int;
+		outputfile << "v_int.max_size(): " << v_int.max_size() << std::endl;
+		std::vector<std::string> v_str;
+		outputfile << "v_str.max_size(): " << v_str.max_size() << std::endl;
 	}
 	{
-		// outputfile << YELLOW "max_size" RESET << std::endl;
-		// unsigned long size;
-		// NAMESPACE::vector<char> v_char;
-		// size = v_char.max_size();
-		// outputfile << "v_char.max_size(): " << size << std::endl;
+		outputfile << YELLOW "max_size" RESET << std::endl;
+		unsigned long size;
 		
-		// NAMESPACE::vector<int> v_int;
-		// size = v_int.max_size();
-		// outputfile << "v_int.max_size(): " << size << std::endl;
+		NAMESPACE::vector<int> v_int;
+		size = v_int.max_size();
+		outputfile << "v_int.max_size(): " << size << std::endl;
 
-		// NAMESPACE::vector<std::string> v_str;
-		// size =v_str.max_size();
-		// outputfile << "v_str.max_size(): " << size << std::endl;
+		NAMESPACE::vector<std::string> v_str;
+		size =v_str.max_size();
+		outputfile << "v_str.max_size(): " << size << std::endl;
 	}
 	{
 		outputfile << YELLOW "reserve" RESET << std::endl;
@@ -978,13 +975,13 @@ int main(void)
 	test_resize();
 	test_capacity();
 	test_empty();
-	// test_reserve(); // works but capacity grows differently
+	test_reserve(); // works but capacity grows differently
 	test_subscript_operator();
 	test_at();
 	test_front();
 	test_back();
 	test_assign();
-	// test_push_back(); // use cin
+	//test_push_back(); // use cin
 	test_pop_back();
 	test_insert();
 	test_erase();
